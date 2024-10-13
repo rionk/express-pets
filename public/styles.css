@@ -474,19 +474,13 @@ textarea.form-field {
 	grid-template-columns: minmax(0, 320px) 1fr;
 }
 
-@media (max-width: 800px){
-
-}
-
 .form-content {
 	padding: 34px 54px;
-	position: relative;
 }
 
 .form-photo {
 	position: relative;
-	order: 1;
-	grid-row: 1/2;
+	order: -1;
 }
 
 .form-photo img {
@@ -496,7 +490,7 @@ textarea.form-field {
 	object-fit: cover;
 }
 
-.form-photo p{
+.form-photo p {
 	position: absolute;
 	left:0;
 	right:0;
@@ -597,4 +591,36 @@ textarea.form-field {
 
 .contact-list tr:nth-child(odd) {
 	background-color: #f1f1f1;
+}
+
+@media (max-width: 745px) {
+	.form-overlay {
+		overflow-y: auto;
+	}
+
+	.form-overlay-inner {
+		grid-template-columns: 1fr;
+		align-self: start;
+	}
+
+	.form-content {
+		/*grid-column: 1 / -1;*/
+		/*grid-row: 2 / 3;*/
+		padding: 30px 30px
+	}
+
+	.form-photo {
+		/*grid-column: 1 / -1;*/
+		/*grid-row: 1 / 2;*/
+		height: 200px;
+	}
+
+	.form-photo p {
+		/*font-size: 14px;*/
+		padding: 14px 20px
+	}
+
+	.form-photo p strong {
+		font-size: 20px
+	}
 }
